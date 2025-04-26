@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kotlin : My first app</string>
+    <string name="name">Ferdinand Croquelois</string>
+    <string name="image_description">Bandeau</string>
+    <string name="profil_description">Profil</string>
+    <string name="content">Salut les codeurs, moi c\'est Ferdinand,
+        je suis ici pour apprendre le développement d\'applications Android
+    avec Kotlin et le framework Jetpack Compose</string>
+</resources>

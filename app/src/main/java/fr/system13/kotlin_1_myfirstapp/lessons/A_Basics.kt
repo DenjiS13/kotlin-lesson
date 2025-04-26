@@ -1,0 +1,89 @@
+package fr.system13.kotlin_1_myfirstapp.lessons
+
+import fr.system13.kotlin_1_myfirstapp.Logger
+
+/**
+ * Exemples de types en Kotlin
+ */
+class A_Basics {
+    val constant: String = "Constant"
+    var nullableString: String? = null
+    var nullableInt: Int? = null
+    // ...
+
+    var nullableAny: Any? = null
+    var notNullableString: String = ""
+    var notNullableInt: Int = 0
+    var notNullableBoolean: Boolean = false
+    var notNullableDouble: Double = 0.0
+    var notNullableFloat: Float = 0.0f
+    var notNullableLong: Long = 0
+    var notNullableChar: Char = ' '
+    var notNullableByte: Byte = 0
+    var notNullableShort: Short = 0
+
+    // Unit est un type qui n'a qu'une seule valeur, Unit.
+    // C'est un peu comme le type void en Java ou C++.
+    var notNullableAny: Any = Unit // Unit = void
+
+    fun stringManipuolation() {
+
+        // Interpolation
+        val name: String = "Marseille"
+        val arr: Int = 16
+        Logger.debug("stringManipuolation", "\$name possède \$arr arrondissements : $name possède $arr arrondissements")
+
+        // \ est un caractère d'échapement
+        val jump: String = "Salut, je vais sauter à la ligne\nVoilà !"
+        Logger.debug("stringManipuolation", jump)
+
+        // Triple quotes : permet de mettre plusieurs lignes
+        val multiLine: String = """Salut, je vais sauter à la ligne
+        Voilà !"""
+        Logger.debug("stringManipuolation", multiLine)
+
+        // boucler sur chaque caractère
+        for (c in name) {
+            Logger.debug("stringManipuolation", "for (c in name) :  $c")
+        }
+
+        // Changer la casse
+        Logger.debug("stringManipuolation", "name.uppercase() : " + name.uppercase())
+        Logger.debug("stringManipuolation", "name.lowercase() : " + name.lowercase())
+
+        // Substring
+        Logger.debug("stringManipuolation", "name.substring(0, 5) : " + name.substring(0, 5))
+
+        // Split
+        val paris: String = "Paris 75"
+        val arrondissement: List<String> = paris.split(" ")
+        Logger.debug("stringManipuolation", "arrondissement[0] : " + arrondissement[0])
+        Logger.debug("stringManipuolation", "arrondissement[1] : " + arrondissement[1])
+
+        // Concatenation
+        val name2: String = "Marseille"
+        val name3: String = "Lyon"
+        Logger.debug("stringManipuolation", "\$name2 \$name3 : " + "$name2 $name3")
+    }
+
+    fun pairAndTriple() {
+
+        // Pair
+        val error = Pair(404, "Page not found")
+        Logger.debug("pairAndTriple", "error : $error")
+        Logger.debug("pairAndTriple", "error.first : " + error.first.toString())
+        Logger.debug("pairAndTriple", "error.second : " + error.second)
+
+        // Pair avec destructuration
+        val (code, description) = Pair(404, "Page not found")
+        Logger.debug("pairAndTriple", "code : " + code.toString())
+        Logger.debug("pairAndTriple", "description : " + description)
+
+        // Triple
+        val error2 = Triple(404, "Page not found", "Not found")
+        Logger.debug("pairAndTriple", "error2.toString() : " + error2.toString())
+        Logger.debug("pairAndTriple", "error2.first.toString() : " + error2.first.toString())
+        Logger.debug("pairAndTriple", "error2.second  : " + error2.second)
+        Logger.debug("pairAndTriple", "error2.third  : " + error2.third)
+    }
+}
