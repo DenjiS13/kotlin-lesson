@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_mario_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kotlin_1_MyFirstApp"
+        android:theme="@style/Theme.KotlinLesson"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Kotlin_1_MyFirstApp">
+            android:theme="@style/Theme.KotlinLesson">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

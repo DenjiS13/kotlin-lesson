@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp.lessons
+package fr.system13.kotlin_lesson.lessons
 
 class E_Loops {
 

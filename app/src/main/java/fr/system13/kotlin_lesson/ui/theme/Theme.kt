@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp.ui.theme
+package fr.system13.kotlin_lesson.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -52,7 +52,7 @@ private val MarioLightColorPalette = lightColorScheme(
 // endregion
 
 @Composable
-fun Kotlin_1_MyFirstAppTheme(
+fun KotlinLessonTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,

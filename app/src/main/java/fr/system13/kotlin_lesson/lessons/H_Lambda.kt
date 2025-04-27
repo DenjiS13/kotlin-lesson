@@ -1,8 +1,8 @@
-package fr.system13.kotlin_1_myfirstapp.lessons
+package fr.system13.kotlin_lesson.lessons
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.toUpperCase
-import fr.system13.kotlin_1_myfirstapp.Logger
+import fr.system13.kotlin_lesson.Logger
 import java.util.Locale
 
 class H_Lambda {

@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp.ui.theme
+package fr.system13.kotlin_lesson.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "fr.system13.kotlin_1_myfirstapp"
+    namespace = "fr.system13.kotlin_lesson"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "fr.system13.kotlin_1_myfirstapp"
+        applicationId = "fr.system13.kotlin_lesson"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

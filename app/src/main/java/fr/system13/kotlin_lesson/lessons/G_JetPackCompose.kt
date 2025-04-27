@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp.lessons
+package fr.system13.kotlin_lesson.lessons
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,14 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
-import fr.system13.kotlin_1_myfirstapp.ui.theme.Kotlin_1_MyFirstAppTheme
+import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 
 class G_JetPackCompose : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Kotlin_1_MyFirstAppTheme {
+            KotlinLessonTheme {
             }
         }
     }

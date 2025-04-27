@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp.exercices
+package fr.system13.kotlin_lesson.exercices
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -35,15 +35,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import fr.system13.kotlin_1_myfirstapp.R
-import fr.system13.kotlin_1_myfirstapp.ui.theme.Kotlin_1_MyFirstAppTheme
+import fr.system13.kotlin_lesson.R
+import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 
 class Exercice_01_Profil : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Kotlin_1_MyFirstAppTheme {
+            KotlinLessonTheme {
                 GetSurface()
             }
         }
@@ -52,7 +52,7 @@ class Exercice_01_Profil : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun GreetingPreview() {
-        Kotlin_1_MyFirstAppTheme {
+        KotlinLessonTheme {
             GetSurface()
         }
     }

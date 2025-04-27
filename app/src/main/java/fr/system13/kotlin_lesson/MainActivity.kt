@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp
+package fr.system13.kotlin_lesson
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -28,13 +28,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_1_myfirstapp.ui.theme.Kotlin_1_MyFirstAppTheme
+import fr.system13.kotlin_lesson.R
+import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Kotlin_1_MyFirstAppTheme {
+            KotlinLessonTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -121,7 +122,7 @@ fun Body(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    Kotlin_1_MyFirstAppTheme {
+    KotlinLessonTheme {
         ScaffoldComposable()
     }
 }

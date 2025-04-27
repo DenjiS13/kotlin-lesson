@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp
+package fr.system13.kotlin_lesson
 
 import org.junit.Test
 
