@@ -1,4 +1,4 @@
-package fr.system13.kotlin_1_myfirstapp
+package fr.system13.kotlin_1_myfirstapp.exercices
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -28,9 +28,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import fr.system13.kotlin_1_myfirstapp.R
 import fr.system13.kotlin_1_myfirstapp.ui.theme.Kotlin_1_MyFirstAppTheme
 
-class MainActivity : ComponentActivity() {
+class Exercice_02_Mario : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

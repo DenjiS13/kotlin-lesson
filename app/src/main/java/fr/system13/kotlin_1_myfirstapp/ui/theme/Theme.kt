@@ -33,11 +33,29 @@ private val LightColorScheme = lightColorScheme(
     */
 )
 
+// region Mario
+
+private val MarioDarkColorPalette = darkColorScheme(
+    primary = MARIO_RED,
+    secondary = MARIO_BLUE,
+    background = MARIO_DARK_BLUE,
+    surface = MARIO_DARK_RED
+)
+
+private val MarioLightColorPalette = lightColorScheme(
+    primary = MARIO_RED,
+    secondary = MARIO_BLUE,
+    background = MARIO_LIGHT_BLUE,
+    surface = MARIO_LIGHT_RED
+)
+
+// endregion
+
 @Composable
 fun Kotlin_1_MyFirstAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -46,8 +64,8 @@ fun Kotlin_1_MyFirstAppTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+        darkTheme -> MarioDarkColorPalette
+        else -> MarioLightColorPalette
     }
 
     MaterialTheme(
