@@ -9,7 +9,8 @@ import fr.system13.kotlin_lesson.lessons.F_Conditions
 import fr.system13.kotlin_lesson.lessons.H_Lambda
 
 class Exercice_00 {
-    init {
+
+    fun callAll() {
         A_Basics().callAll()
         B_Lists().callAll()
         C_Operators().callAll()

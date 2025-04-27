@@ -80,6 +80,7 @@ fun ScaffoldComposable() {
     )
 }
 
+@SuppressLint("ConfigurationScreenWidthHeight")
 @Composable
 fun Body(name: String) {
     val localConfiguration = LocalConfiguration.current

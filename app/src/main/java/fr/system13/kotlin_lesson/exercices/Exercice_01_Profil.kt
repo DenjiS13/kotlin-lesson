@@ -40,6 +40,7 @@ import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 class Exercice_01_Profil : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Exercice_00().callAll()
         enableEdgeToEdge()
         setContent {
             KotlinLessonTheme {

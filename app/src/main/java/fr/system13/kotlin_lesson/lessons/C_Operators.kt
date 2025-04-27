@@ -92,10 +92,9 @@ class C_Operators {
         val b = false
         val c = Any()
         val d = Any()
-        var result = false
 
         // And
-        result = a && b     // false
+        var result: Boolean = a && b     // false
         Logger.debug("booleanOperators", " a && b : $result")
 
         // Or
