@@ -4,6 +4,12 @@ import fr.system13.kotlin_lesson.Logger
 
 class F_Conditions {
 
+    fun callAll() {
+        ifElse()
+        whenExpression()
+        nullables()
+    }
+
     fun ifElse() {
 
         val speedLimit = 75
@@ -23,7 +29,7 @@ class F_Conditions {
         // Sur une seule ligne
         val isSunny = false
         val message = if (isSunny) "Tous à la plage" else "Mario Party!"
-
+        Logger.debug("ifElse", message)
     }
 
     fun whenExpression() {
@@ -46,7 +52,7 @@ class F_Conditions {
         Logger.debug("nullables", " name?.length : ${name?.length}") // Int?
 
         if (name != null) {
-            Logger.debug("nullables", " if (name != null) : ${name?.length}") // Int?
+            Logger.debug("nullables", " if (name != null) : ${name.length}") // Int?
 
         } else {
             Logger.debug("nullables", " else : C'est une variable null") // Int?

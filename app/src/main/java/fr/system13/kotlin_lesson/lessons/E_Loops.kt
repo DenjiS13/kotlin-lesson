@@ -2,6 +2,13 @@ package fr.system13.kotlin_lesson.lessons
 
 class E_Loops {
 
+    fun callAll() {
+        forIn()
+        forInRange()
+        forInIndices()
+        whileAndDoWhileLoop()
+    }
+
     fun forIn() {
 
         // Sur une liste mutable
@@ -51,7 +58,7 @@ class E_Loops {
         }
     }
 
-    fun whileLoop(){
+    fun whileAndDoWhileLoop() {
         var index = 0
 
         // While

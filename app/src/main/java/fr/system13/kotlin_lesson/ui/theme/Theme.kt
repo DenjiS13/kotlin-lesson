@@ -1,6 +1,5 @@
 package fr.system13.kotlin_lesson.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -63,7 +62,8 @@ fun KotlinLessonTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
+        dynamicColor && darkTheme -> DarkColorScheme
+        dynamicColor && !darkTheme -> LightColorScheme
         darkTheme -> MarioDarkColorPalette
         else -> MarioLightColorPalette
     }

@@ -6,35 +6,43 @@ import fr.system13.kotlin_lesson.Logger
  * Exemples de types en Kotlin
  */
 class A_Basics {
-    val constant: String = "Constant"
-    var nullableString: String? = null
-    var nullableInt: Int? = null
-    // ...
 
-    var nullableAny: Any? = null
-    var notNullableString: String = ""
-    var notNullableInt: Int = 0
-    var notNullableBoolean: Boolean = false
-    var notNullableDouble: Double = 0.0
-    var notNullableFloat: Float = 0.0f
-    var notNullableLong: Long = 0
-    var notNullableChar: Char = ' '
-    var notNullableByte: Byte = 0
-    var notNullableShort: Short = 0
+    fun callAll() {
+        val constant: String = "Constant"
+        var nullableString: String? = null
+        var nullableInt: Int? = null
+        // ...
 
-    // Unit est un type qui n'a qu'une seule valeur, Unit.
-    // C'est un peu comme le type void en Java ou C++.
-    var notNullableAny: Any = Unit // Unit = void
+        var nullableAny: Any? = null
+        var notNullableString: String = ""
+        var notNullableInt: Int = 0
+        var notNullableBoolean: Boolean = false
+        var notNullableDouble: Double = 0.0
+        var notNullableFloat: Float = 0.0f
+        var notNullableLong: Long = 0
+        var notNullableChar: Char = ' '
+        var notNullableByte: Byte = 0
+        var notNullableShort: Short = 0
+
+        // Unit est un type qui n'a qu'une seule valeur, Unit.
+        // C'est un peu comme le type void en Java ou C#.
+        var notNullableAny: Any = Unit // Unit = void
+
+
+
+        stringManipuolation()
+        pairAndTriple()
+    }
 
     fun stringManipuolation() {
 
         // Interpolation
-        val name: String = "Marseille"
-        val arr: Int = 16
+        val name = "Marseille"
+        val arr = 16
         Logger.debug("stringManipuolation", "\$name possède \$arr arrondissements : $name possède $arr arrondissements")
 
         // \ est un caractère d'échapement
-        val jump: String = "Salut, je vais sauter à la ligne\nVoilà !"
+        val jump = "Salut, je vais sauter à la ligne\nVoilà !"
         Logger.debug("stringManipuolation", jump)
 
         // Triple quotes : permet de mettre plusieurs lignes

@@ -3,6 +3,15 @@ package fr.system13.kotlin_lesson.lessons
 import fr.system13.kotlin_lesson.Logger
 
 class B_Lists {
+
+    fun callAll() {
+        arrayOf()
+        listOf()
+        mutableListOf()
+        setOfAndMutableSet()
+        mapsAndMutableMaps()
+    }
+
     /** Les arrays sont immutables */
     fun arrayOf() {
         var boys = arrayOf<String>("Jean", "Michel", "Jacques", "John")

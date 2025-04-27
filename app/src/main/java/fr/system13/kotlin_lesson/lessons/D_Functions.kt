@@ -1,8 +1,8 @@
 package fr.system13.kotlin_lesson.lessons
 
-class D_Functions() {
+class D_Functions {
 
-    init { // Constructeur principal
+    fun callAll() {
         basicFunction()
         basicFunction("Quentin")
         basicFunctionWithDefault("Quentin")
@@ -10,27 +10,25 @@ class D_Functions() {
         basicFunctionWithMultipleParam("Quentin", 25)
         basicFunctionWithMultipleParam(age = 25, name = "Quentin") // on peut préciser les paramètres dans le désordre
         basicFunctionWithMultipleParamWithReturn("Quentin", 25)
-
-
     }
 
     // Fonction simple sans retour
-    fun basicFunction(): Unit { // Unit signifie que la fonction ne retourne rien
+    fun basicFunction() { // Unit signifie que la fonction ne retourne rien
         println("Salut les apprenants! Je suis une fonction")
     }
 
     // Fonction avec paramètre, sans retour
-    fun basicFunction(name: String): Unit {
+    fun basicFunction(name: String) {
         println("Salut $name")
     }
 
     // Fonction avec paramètre par défaut, sans retour
-    fun basicFunctionWithDefault(name: String = "Anonyme"): Unit {
+    fun basicFunctionWithDefault(name: String = "Anonyme") {
         println("Salut $name")
     }
 
     // Fonction avec plusieurs paramètres, sans retour
-    fun basicFunctionWithMultipleParam(name: String, age: Int): Unit {
+    fun basicFunctionWithMultipleParam(name: String, age: Int) {
         println("Salut $name, tu as $age ans")
     }
 

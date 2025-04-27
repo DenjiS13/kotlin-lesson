@@ -4,6 +4,13 @@ import fr.system13.kotlin_lesson.Logger
 
 class C_Operators {
 
+    fun callAll() {
+        unaryOperators()
+        arithmeticOperators()
+        booleanOperators()
+        interoperabilityOperators()
+    }
+
     fun unaryOperators() {
 
         // Assignation d'une variable

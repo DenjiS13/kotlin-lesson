@@ -1,11 +1,15 @@
 package fr.system13.kotlin_lesson.lessons
 
-import androidx.compose.runtime.staticCompositionLocalOf
-import androidx.compose.ui.text.toUpperCase
 import fr.system13.kotlin_lesson.Logger
-import java.util.Locale
 
 class H_Lambda {
+
+    fun callAll() {
+        basicLambda()
+        lambdaWithParameters()
+        lambdaWithReturn()
+        lambdaAsParameter()
+    }
 
     fun basicLambda() {
 
@@ -39,7 +43,7 @@ class H_Lambda {
 
         // Définition d'une expression Lambda simple
         val lambda = { name: String -> "Bonjour $name" }
-        println(lambda("Ferdinand"))
+        lambda("Ferdinand")
 
         // $it : paramètre de l'expression Lambda par défaut
         val lambda2: (String) -> String = { "Bonjour $it" }
@@ -47,9 +51,9 @@ class H_Lambda {
 
         // exemple : Double to Int
         val doubleToIntV1: (Double) -> Int = { it.toInt() }
-        val resultV1 = doubleToIntV1(3.14)
+        println(doubleToIntV1(3.14))
         val doubleToIntV2: (Double) -> Int = { dbl -> dbl.toInt() }
-        val resultV2 = doubleToIntV2(3.14)
+        doubleToIntV2(3.14)
 
         // Plusieurs paramètres
         val lambda3 = { name: String, age: Int -> "Bonjour $name, tu as $age ans" }
