@@ -10,7 +10,7 @@ class F_Conditions {
         nullables()
     }
 
-    fun ifElse() {
+    private fun ifElse() {
 
         val speedLimit = (0..200).random() // RANDOM :-) toujours utile
 
@@ -32,7 +32,7 @@ class F_Conditions {
         Logger.debug("ifElse", message)
     }
 
-    fun whenExpression() {
+    private fun whenExpression() {
 
         val speedLimit = (0..200).random()
 
@@ -45,7 +45,7 @@ class F_Conditions {
         }
     }
 
-    fun nullables() {
+    private fun nullables() {
 
         var name: String? = null
         if ((0..200).random() % 2 == 0) name = "Ferdinand"

@@ -9,7 +9,7 @@ class E_Loops {
         whileAndDoWhileLoop()
     }
 
-    fun forIn() {
+    private fun forIn() {
 
         // Sur une liste mutable
         val list = mutableListOf(1, 34, 89, 567, 2, 345, 4)
@@ -23,14 +23,14 @@ class E_Loops {
             println("$key possède $value €")
         }
 
-        // Sur une String pour lire chaque caractère
+        // Sur un String pour lire chaque caractère
         val string = "Essayez de passer à travers tous mes caractères"
         for (character in string) {
             println(character)
         }
     }
 
-    fun forInRange(){
+    private fun forInRange() {
 
         // Range de 0 à 13
         for (index in 0..13) {
@@ -38,16 +38,16 @@ class E_Loops {
         }
     }
 
-    fun forInIndices(){
+    private fun forInIndices() {
 
         val list = mutableListOf(1, 34, 89, 567, 2, 345, 4)
 
         // Utilisation de l'index
-        for (index in 0..list.size - 1) {
+        for (index in 0..<list.size) {
             println(list[index])
         }
 
-        // Plus pratique car l'index est implicite
+        // Plus pratique, car l'index est implicite
         for (index in list.indices) {
             println("Je suis l'index $index")
         }
@@ -58,7 +58,7 @@ class E_Loops {
         }
     }
 
-    fun whileAndDoWhileLoop() {
+    private fun whileAndDoWhileLoop() {
         var index = 0
 
         // While

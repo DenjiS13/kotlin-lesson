@@ -13,9 +13,9 @@ class B_Lists {
     }
 
     /** Les arrays sont immutables */
-    fun arrayOf() {
-        var boys = arrayOf<String>("Jean", "Michel", "Jacques", "John")
-        var girls = arrayOf<String>("Marie", "Robert", "Myriam", "Sonia", "Cindy", "Helena", "Caroline")
+    private fun arrayOf() {
+        var boys = arrayOf("Jean", "Michel", "Jacques", "John")
+        var girls = arrayOf("Marie", "Robert", "Myriam", "Sonia", "Cindy", "Helena", "Caroline")
 
         // Obtenir la taille d'un Array
         Logger.debug("arrayOf", "taille de boys : ${boys.size}")
@@ -29,7 +29,7 @@ class B_Lists {
         girls = girls.filter { it != "Robert" }.toTypedArray()
         Logger.debug("arrayOf", "girls - Robert : ${girls.asList()}")
 
-        // Concatener
+        // Concaténer
         val fullClass = boys + girls
         Logger.debug("arrayOf", "fullClass : ${fullClass.asList()}")
 
@@ -39,68 +39,59 @@ class B_Lists {
         // Obtenir un élément via l'index
         val chosenStudent = girls[1]
 
-        //En choisissant l'index 1, on tombe sur Myriam, car l'index commence à 0
+        //En choisissant l'index 1, on tombe sur Myriam, car l'index commence à zéro
         Logger.debug("arrayOf", "l'élève n°1 est : $chosenStudent")
-
-        // Obtenir un élément via l'index
-        val chosenStudent2 = girls.get(5)
-
-        //En choisissant l'index 1, on tombe sur Myriam, car l'index commence à 0
-        Logger.debug("arrayOf", "l'élève n°5 est : $chosenStudent2")
     }
 
     /** Les listOf sont en readonly */
-    fun listOf() {
+    private fun listOf() {
 
-        val nflPlayers = listOf<String>(
-            "Brady", "Kamara", "Kupp", "Garropolo", "Mahomes", "OBJ", "Kittle", "Kelce",
-            "Bosa"
-        )
+        val fruits = listOf("Banane", "Pomme", "Kiwi", "Fraise", "Ananas", "Poire", "Raisin")
 
         // Obtenir toute la liste
-        Logger.debug("listOf", "nflPlayers : $nflPlayers")
+        Logger.debug("listOf", "fruits : $fruits")
 
         // Obtenir la taille d'une liste
-        Logger.debug("listOf", "taille de nflPlayers : ${nflPlayers.size}")
+        Logger.debug("listOf", "taille de fruits : ${fruits.size}")
 
         // Obtenir un élément via l'index
-        Logger.debug("listOf", "nflPlayers[0] : ${nflPlayers[0]}")
+        Logger.debug("listOf", "fruits[0] : ${fruits[0]}")
 
         // Index Via le get
-        Logger.debug("listOf", "nflPlayers.get(3) : ${nflPlayers.get(3)}")
+        Logger.debug("listOf", "fruits.get(3) : ${fruits.get(3)}")
 
-        // Obtenir l'index par rapport a un nom de joueur
-        Logger.debug("listOf", "nflPlayers.indexOf(\"Kittle\") : ${nflPlayers.indexOf("Kittle")}")
+        // Obtenir l'index par rapport à un nom de joueur
+        Logger.debug("listOf", "fruits.indexOf(\"Poire\") : ${fruits.indexOf("Poire")}")
     }
 
-    /** les mutableListOf sont mutables */
-    fun mutableListOf() {
+    /** Les mutableListOf sont mutables */
+    private fun mutableListOf() {
 
-        val nflPlayers: MutableList<String> = mutableListOf<String>("Brady", "Kamara", "Kupp", "Garropolo", "Mahomes", "OBJ", "Kittle", "Kelce", "Bosa")
+        val fruits: MutableList<String> = mutableListOf("Banane", "Pomme", "Kiwi", "Fraise", "Tomate", "Ananas", "Poire", "Raisin")
 
-        Logger.debug("mutableListOf", "nflPlayers : $nflPlayers")
+        Logger.debug("mutableListOf", "fruits : $fruits")
 
         // Ajouter (en fin de liste)
-        nflPlayers.add("Rodgers")
-        Logger.debug("mutableListOf", "nflPlayers.add(\"Rodgers\") : $nflPlayers")
+        fruits.add("Framboise")
+        Logger.debug("mutableListOf", "fruits.add(\"Framboise\") : $fruits")
 
         // Ajouter selon un index précis
-        nflPlayers.add(1, "Gronkowski")
-        Logger.debug("mutableListOf", "nflPlayers.add(1, \"Gronkowski\") : $nflPlayers")
+        fruits.add(1, "Mangue")
+        Logger.debug("mutableListOf", "fruits.add(1, \"Mangue\") : $fruits")
 
         // supprimer selon une valeur
-        nflPlayers.remove("OBJ")
-        Logger.debug("mutableListOf", "nflPlayers.remove(\"OBJ\") : $nflPlayers")
+        fruits.remove("Tomate")
+        Logger.debug("mutableListOf", "fruits.remove(\"Tomate\") : $fruits")
 
         //supprimer selon un index
-        nflPlayers.removeAt(7)
-        Logger.debug("mutableListOf", "nflPlayers.removeAt(7) : $nflPlayers")
+        fruits.removeAt(7)
+        Logger.debug("mutableListOf", "fruits.removeAt(7) : $fruits")
 
         //Voir si le joueur est là (est contenu dans la liste)
-        Logger.debug("mutableListOf", "flPlayers.contains(\"Brady\") : ${nflPlayers.contains("Brady")}")
+        Logger.debug("mutableListOf", "fruits.contains(\"Fraise\") : ${fruits.contains("Fraise")}")
     }
 
-    fun mapsAndMutableMaps() {
+    private fun mapsAndMutableMaps() {
 
         val classroomResults: MutableMap<String, Int> = mutableMapOf(
             "Johnny" to 12, // clé : Johnny, valeur : 12
@@ -123,8 +114,8 @@ class B_Lists {
         classroomResults["Sophie"] = 19
         Logger.debug("mapsAndMutableMaps", "classroomResults[\"Sophie\"] = 19 : $classroomResults")
 
-        // Ajouter: Notez que c'est exactement comme modifier une valeur
-        // Si la clé n'existe pas elle est créée
+        // Ajouter : Notez que c'est exactement comme modifier une valeur
+        // Si la clé n'existe pas, elle est créée
         classroomResults["Mika"] = 5
         Logger.debug("mapsAndMutableMaps", "classroomResults[\"Mika\"] = 5 : $classroomResults")
 
@@ -133,7 +124,7 @@ class B_Lists {
         Logger.debug("mapsAndMutableMaps", "classroomResults.remove(\"Quentin\") : $classroomResults")
     }
 
-    fun setOfAndMutableSet() {
+    private fun setOfAndMutableSet() {
 
         // Création d'un ensemble
         val fruits: Set<String> = setOf("Pomme", "Banane", "Orange")

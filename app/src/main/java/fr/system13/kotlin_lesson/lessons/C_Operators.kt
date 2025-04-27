@@ -11,7 +11,7 @@ class C_Operators {
         interoperabilityOperators()
     }
 
-    fun unaryOperators() {
+    private fun unaryOperators() {
 
         // Assignation d'une variable
         var value = 12
@@ -20,7 +20,7 @@ class C_Operators {
         value++                 // 14, lecture de la variable, puis incrémentation
         ++value                 // 15, incrémentation, puis lecture de la variable
 
-        // Decrémentation
+        // Décrémentation
         value--                 // 14, lecture de la variable, puis décrémentation
         --value                 // 13, décrémentation, puis lecture de la variable
 
@@ -44,7 +44,7 @@ class C_Operators {
         value /= 5              // 13
     }
 
-    fun arithmeticOperators() {
+    private fun arithmeticOperators() {
 
         // Addition
         val sum = 1 + 2         // 3
@@ -68,7 +68,7 @@ class C_Operators {
         println(modulo)
     }
 
-    fun interoperabilityOperators() {
+    private fun interoperabilityOperators() {
 
         val numberA = 3
         val numberB = 7.5F
@@ -87,7 +87,7 @@ class C_Operators {
         Logger.debug("interoperabilityOperators", " numberC + numberA.toDouble() : $resultDouble")
     }
 
-    fun booleanOperators() {
+    private fun booleanOperators() {
         val a = true
         val b = false
         val c = Any()
@@ -131,11 +131,11 @@ class C_Operators {
         val homeworkDone = false
         val average = (10..20).random()
 
-        // Ici nous vérifions si la personne a 18 ans ou plus ET si c'est dimanche
+        // Ici, nous vérifions si la personne a 18 ans ou plus ET si c'est dimanche
         val canGoOut = age >= 18 && isSunday
         Logger.debug("booleanOperators", " age >= 18 && isSunday : $canGoOut")
 
-        //Ici nous vérifions si les devoirs sont faits et si sa moyenne OU plus de 10
+        //Ici, nous vérifions si les devoirs sont faits et si sa moyenne OU plus de dix
         val restTime = homeworkDone || average > 10
         Logger.debug("booleanOperators", " homeworkDone || average > 10 : $restTime")
     }

@@ -109,7 +109,7 @@ fun Body(name: String) {
                 Text(text = name, style = MaterialTheme.typography.headlineLarge, color = MaterialTheme.colorScheme.secondary, modifier = Modifier.padding(top = 8.dp, bottom = 8.dp))
                 HorizontalDivider()
                 Text(
-                    "Je suis un plombier d'une quarantaine d'années vivant à New Yorl City.\nMa grande passion? \n Passer quelques temps à Champignon city pour sauver des princesses et jouer avec des carapaces de tortues",
+                    "Je suis un plombier d'une quarantaine d'années vivant à New York City.\nMa grande passion? \n Passer quelques temps à Champignon city pour sauver des princesses et jouer avec des carapaces de tortues",
                     modifier = Modifier.padding(top = 8.dp, bottom = 8.dp, start = 16.dp, end = 16.dp),
                     textAlign = TextAlign.Left
                 )

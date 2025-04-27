@@ -11,7 +11,7 @@ class H_Lambda {
         lambdaAsParameter()
     }
 
-    fun basicLambda() {
+    private fun basicLambda() {
 
         // Définition d'une expression Lambda
         val lambda = { println("Je viens de créer ma première expression Lambda") }
@@ -20,7 +20,7 @@ class H_Lambda {
         lambda()
     }
 
-    fun lambdaWithParameters() {
+    private fun lambdaWithParameters() {
 
         // Définition d'une expression Lambda simple
         val lambda = { name: String -> println("Bonjour $name") }
@@ -39,7 +39,7 @@ class H_Lambda {
         lambda4("Ferdinand", 53)
     }
 
-    fun lambdaWithReturn() {
+    private fun lambdaWithReturn() {
 
         // Définition d'une expression Lambda simple
         val lambda = { name: String -> "Bonjour $name" }
@@ -62,7 +62,7 @@ class H_Lambda {
         lambda4("Ferdinand", 53)
     }
 
-    fun lambdaAsParameter() {
+    private fun lambdaAsParameter() {
         val toUpper: (String) -> String = String::uppercase
         val toLower: (String) -> String = String::lowercase
 
