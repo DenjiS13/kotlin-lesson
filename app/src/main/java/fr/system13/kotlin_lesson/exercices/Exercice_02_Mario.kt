@@ -30,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import fr.system13.kotlin_lesson.R
 import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin_lesson.ui.theme.Shapes
 
 class Exercice_02_Mario : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +65,7 @@ fun AppBar() {
                 contentDescription = null,
                 modifier = Modifier
                     .padding(8.dp)
-                    .clip(MaterialTheme.shapes.medium)
+                    .clip(Shapes.medium)
             )
         }
     )
@@ -94,7 +95,7 @@ fun Body(name: String) {
         Surface(
             shadowElevation = 12.dp,
             modifier = Modifier.width((width * 0.66).dp),
-            shape = MaterialTheme.shapes.small
+            shape = Shapes.small
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Image(
@@ -104,7 +105,7 @@ fun Body(name: String) {
                         .height((height / 5).dp)
                         .width((height / 5).dp)
                         .padding(25.dp)
-                        .clip(MaterialTheme.shapes.large)
+                        .clip(Shapes.large)
                 )
                 Text(text = name, style = MaterialTheme.typography.headlineLarge, color = MaterialTheme.colorScheme.secondary, modifier = Modifier.padding(top = 8.dp, bottom = 8.dp))
                 HorizontalDivider()

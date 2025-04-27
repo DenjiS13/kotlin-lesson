@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 
@@ -38,8 +37,8 @@ fun GetScreenSize() {
 
 // region Colors
 
-val colorConstant = Color.Red
-val colorHex = Color(0xFF00FF00) // forme 0xAARRGGBB
-val colorInt = Color(alpha = 255, red = 255, green = 255, blue = 0)
+//val colorConstant = Color.Red
+//val colorHex = Color(0xFF00FF00) // forme 0xAARRGGBB
+//val colorInt = Color(alpha = 255, red = 255, green = 255, blue = 0)
 
 // endregion

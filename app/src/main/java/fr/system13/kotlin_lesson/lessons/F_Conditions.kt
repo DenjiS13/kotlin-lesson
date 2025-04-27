@@ -12,7 +12,7 @@ class F_Conditions {
 
     fun ifElse() {
 
-        val speedLimit = 75
+        val speedLimit = (0..200).random() // RANDOM :-) toujours utile
 
         if (speedLimit <= 30) {
             println("Proche d'une école")
@@ -34,7 +34,7 @@ class F_Conditions {
 
     fun whenExpression() {
 
-        val speedLimit = 75
+        val speedLimit = (0..200).random()
 
         when (speedLimit) {
             30 -> println("Proche d'une école")
@@ -47,7 +47,8 @@ class F_Conditions {
 
     fun nullables() {
 
-        val name: String? = null
+        var name: String? = null
+        if ((0..200).random() % 2 == 0) name = "Ferdinand"
 
         Logger.debug("nullables", " name?.length : ${name?.length}") // Int?
 

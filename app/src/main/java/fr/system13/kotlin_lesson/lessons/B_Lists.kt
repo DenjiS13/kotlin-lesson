@@ -102,7 +102,7 @@ class B_Lists {
 
     fun mapsAndMutableMaps() {
 
-        var classroomResults: MutableMap<String, Int> = mutableMapOf(
+        val classroomResults: MutableMap<String, Int> = mutableMapOf(
             "Johnny" to 12, // clé : Johnny, valeur : 12
             "Quentin" to 15,
             "Sophie" to 11,

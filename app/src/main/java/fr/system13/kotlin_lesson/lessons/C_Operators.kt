@@ -14,10 +14,7 @@ class C_Operators {
     fun unaryOperators() {
 
         // Assignation d'une variable
-        var value = 0
-
-        // Modification d'une variable
-        value = 13
+        var value = 12
 
         // Incrémentation
         value++                 // 14, lecture de la variable, puis incrémentation
@@ -50,19 +47,25 @@ class C_Operators {
     fun arithmeticOperators() {
 
         // Addition
-        var sum = 1 + 2         // 3
+        val sum = 1 + 2         // 3
 
         // Soustraction
-        var difference = 1 - 2  // -1
+        val difference = 1 - 2  // -1
 
         // Multiplication
-        var product = 1 * 2     // 2
+        val product = 1 * 2     // 2
 
         // Division
-        var quotient = 1 / 2    // 0.5
+        val quotient = 1 / 2    // 0.5
 
         // Modulo
-        var modulo = 11 % 3     // 2
+        val modulo = 11 % 3     // 2
+
+        println(sum)
+        println(difference)
+        println(product)
+        println(quotient)
+        println(modulo)
     }
 
     fun interoperabilityOperators() {
@@ -124,10 +127,10 @@ class C_Operators {
         result = c !== d // Teste l'identité de deux objets, c'est une comparaison de l'adresse de deux objets
         Logger.debug("booleanOperators", " c !== d : $result")
 
-        val age = 18
+        val age = (10..20).random()
         val isSunday = true
         val homeworkDone = false
-        val average = 12
+        val average = (10..20).random()
 
         // Ici nous vérifions si la personne a 18 ans ou plus ET si c'est dimanche
         val canGoOut = age >= 18 && isSunday

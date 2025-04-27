@@ -8,27 +8,23 @@ import fr.system13.kotlin_lesson.Logger
 class A_Basics {
 
     fun callAll() {
-        val constant: String = "Constant"
-        var nullableString: String? = null
-        var nullableInt: Int? = null
-        // ...
-
-        var nullableAny: Any? = null
-        var notNullableString: String = ""
-        var notNullableInt: Int = 0
-        var notNullableBoolean: Boolean = false
-        var notNullableDouble: Double = 0.0
-        var notNullableFloat: Float = 0.0f
-        var notNullableLong: Long = 0
-        var notNullableChar: Char = ' '
-        var notNullableByte: Byte = 0
-        var notNullableShort: Short = 0
-
         // Unit est un type qui n'a qu'une seule valeur, Unit.
         // C'est un peu comme le type void en Java ou C#.
-        var notNullableAny: Any = Unit // Unit = void
-
-
+//        var notNullableAny: Any = Unit // Unit = void
+//
+//        val constant: String = "Constant"
+//        var nullableString: String? = null
+//        var nullableInt: Int? = null
+//        var nullableAny: Any? = null
+//        var notNullableString: String = ""
+//        var notNullableInt: Int = 0
+//        var notNullableBoolean: Boolean = false
+//        var notNullableDouble: Double = 0.0
+//        var notNullableFloat: Float = 0.0f
+//        var notNullableLong: Long = 0
+//        var notNullableChar: Char = ' '
+//        var notNullableByte: Byte = 0
+//        var notNullableShort: Short = 0
 
         stringManipuolation()
         pairAndTriple()
@@ -46,7 +42,7 @@ class A_Basics {
         Logger.debug("stringManipuolation", jump)
 
         // Triple quotes : permet de mettre plusieurs lignes
-        val multiLine: String = """Salut, je vais sauter à la ligne
+        val multiLine = """Salut, je vais sauter à la ligne
         Voilà !"""
         Logger.debug("stringManipuolation", multiLine)
 
@@ -63,14 +59,14 @@ class A_Basics {
         Logger.debug("stringManipuolation", "name.substring(0, 5) : " + name.substring(0, 5))
 
         // Split
-        val paris: String = "Paris 75"
+        val paris = "Paris 75"
         val arrondissement: List<String> = paris.split(" ")
         Logger.debug("stringManipuolation", "arrondissement[0] : " + arrondissement[0])
         Logger.debug("stringManipuolation", "arrondissement[1] : " + arrondissement[1])
 
         // Concatenation
-        val name2: String = "Marseille"
-        val name3: String = "Lyon"
+        val name2 = "Marseille"
+        val name3 = "Lyon"
         Logger.debug("stringManipuolation", "\$name2 \$name3 : " + "$name2 $name3")
     }
 

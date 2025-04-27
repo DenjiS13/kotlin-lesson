@@ -28,7 +28,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_lesson.R
 import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 
 class MainActivity : ComponentActivity() {
