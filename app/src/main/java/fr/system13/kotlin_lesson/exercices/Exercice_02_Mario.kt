@@ -37,21 +37,37 @@ class Exercice_02_Mario : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    ScaffoldComposable()
-                }
+                ScaffoldComposable02()
             }
         }
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview02() {
+    KotlinLessonTheme {
+        ScaffoldComposable02()
+    }
+}
+
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@Composable
+fun ScaffoldComposable02() {
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colorScheme.background
+    ) {
+        Scaffold(
+            topBar = { AppBar02() },
+            content = { Body02(name = "Mario") }
+        )
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppBar() {
+fun AppBar02() {
     TopAppBar(
         title = {
             Text(
@@ -71,18 +87,10 @@ fun AppBar() {
     )
 }
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Composable
-fun ScaffoldComposable() {
-    Scaffold(
-        topBar = { AppBar() },
-        content = { Body(name = "Mario") }
-    )
-}
 
 @SuppressLint("ConfigurationScreenWidthHeight")
 @Composable
-fun Body(name: String) {
+fun Body02 (name: String) {
     val localConfiguration = LocalConfiguration.current
     val height = localConfiguration.screenHeightDp
     val width = localConfiguration.screenWidthDp
@@ -118,13 +126,5 @@ fun Body(name: String) {
             }
         }
         Spacer(modifier = Modifier)
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    KotlinLessonTheme {
-        ScaffoldComposable()
     }
 }

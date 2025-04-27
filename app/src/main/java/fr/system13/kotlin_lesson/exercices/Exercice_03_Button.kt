@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson
+package fr.system13.kotlin_lesson.exercices
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -37,17 +37,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_lesson.exercices.Exercice_00
 import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 import fr.system13.kotlin_lesson.ui.theme.Shapes
 
-class MainActivity : ComponentActivity() {
+class Exercice_03_Button : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                ScaffoldComposable()
-                Exercice_00().callAll()
+                ScaffoldComposable03()
             }
         }
     }
@@ -55,28 +53,28 @@ class MainActivity : ComponentActivity() {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreview03() {
     KotlinLessonTheme {
-        ScaffoldComposable()
+        ScaffoldComposable03()
     }
 }
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun ScaffoldComposable() {
+fun ScaffoldComposable03() {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
         Scaffold(
-            content = { Body() }
+            content = { Body03() }
         )
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Body() {
+fun Body03() {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceEvenly,
