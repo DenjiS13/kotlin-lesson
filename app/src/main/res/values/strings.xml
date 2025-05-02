@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">Kotlin : My first app</string>
-    <string name="name">Ferdinand Croquelois</string>
-    <string name="image_description">Bandeau</string>
-    <string name="profil_description">Profil</string>
-    <string name="content">Salut les codeurs, moi c\'est Ferdinand,
-        je suis ici pour apprendre le développement d\'applications Android
-    avec Kotlin et le framework Jetpack Compose</string>
+    <string name="exo_01_basic_name">Ferdinand Croquelois</string>
+    <string name="exo_01_basic_banner">Bandeau</string>
+    <string name="exo_01_basic_background">Fond</string>
+    <string name="exo_01_basic_profil">Profil</string>
+    <string name="exo_01_basic_content">Salut les codeurs, moi c\'est Ferdinand,\nje suis ici pour apprendre le développement d\'applications Android\navec Kotlin et le framework Jetpack Compose</string>
+    <string name="exo_02_mario_profil">Image Mario</string>
+    <string name="exo_02_mario_description">Je suis un plombier d\'une quarantaine d\'années vivant à New York City.\nMa grande passion? \n Passer quelques temps à Champignon city pour sauver des princesses et jouer avec des carapaces de tortues</string>
+    <string name="exo_03_button_add_click">Ajouter un click</string>
+    <string name="exo_03_button_text">J\'aime le fruit : %1$s</string>
+    <string name="exo_03_button_change_color">Changer la couleur</string>
+    <string name="exo_03_button_clicks_count">Nb de click : %1$s</string>
+    <string name="exo_03_button_reset">Remettre à zéro</string>
+    <string name="exo_03_button_randomize">Fruit aléatoire</string>
+    <string name="exo_04_princess_top_bar">Quelle princess êtes-vous ?</string>
+    <string name="exo_04_princess_response">Vous êtes %1$s</string>
+    <string name="exo_04_princess_go">C\'est parti !</string>
+    <string name="exo_04_princess_response_default">… Encore personne !</string>
+    <string name="exo_04_princess_reset">Remettre à zéro</string>
 </resources>

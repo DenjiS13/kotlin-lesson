@@ -44,21 +44,21 @@ class Exercice_01_Profil : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             KotlinLessonTheme {
-                GetSurface01()
+                GetSurface()
             }
         }
     }
 
     @Preview(showBackground = true)
     @Composable
-    fun GreetingPreview01() {
+    fun Preview() {
         KotlinLessonTheme {
-            GetSurface01()
+            GetSurface()
         }
     }
 
     @Composable
-    fun GetSurface01() {
+    fun GetSurface() {
         Surface {                                           // SURFACE
             Column(                                         // COLUMN
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -66,30 +66,30 @@ class Exercice_01_Profil : ComponentActivity() {
                 modifier = Modifier.fillMaxHeight()
             )
             {
-                GetBanner01()
-                GetBox01()
+                GetBanner()
+                GetBox()
             }
         }
     }
 
     @Composable
-    fun GetBox01() {
+    fun GetBox() {
         Box(                                                    // BOX
             modifier = Modifier.fillMaxWidth(),
             propagateMinConstraints = false,
             contentAlignment = Alignment.TopStart
         )
         {
-            GetBackground01()
-            GetColumn01()
+            GetBackground()
+            GetColumn()
         }
     }
 
     @Composable
-    fun GetColumn01() {
+    fun GetColumn() {
         Column(Modifier.padding(12.dp)) {                   // COLUMN
 
-            GetRow01()
+            GetRow()
             // Ligne de séparation
             HorizontalDivider(                              // HORIZONTAL DIVIDER
                 color = Color.LightGray, thickness = 1.dp,
@@ -97,7 +97,7 @@ class Exercice_01_Profil : ComponentActivity() {
                     .fillMaxWidth()
                     .padding(12.dp)
             )
-            GetText01(R.string.content, 16, TextAlign.Center)
+            GetText(R.string.exo_01_basic_content, 16, TextAlign.Center)
 
             // Espacement
             Spacer(modifier = Modifier.height(20.dp))       // SPACER
@@ -105,23 +105,23 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetRow01() {
+    fun GetRow() {
         Row(                                                // ROW
             verticalAlignment = Alignment.Bottom,
             horizontalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier.fillMaxWidth()
         )
         {
-            GetProfilImage01()
+            GetProfilImage()
             // Ligne d'icônes
-            GetText01(R.string.name, 24, TextAlign.Right)
+            GetText(R.string.exo_01_basic_name, 24, TextAlign.Right)
         }
     }
 
     @Composable
-    fun GetBanner01() {
-        return GetImage01(
-            R.drawable.basic_banner, R.string.image_description,
+    fun GetBanner() {
+        return GetImage(
+            R.drawable.exo_01_basic_banner, R.string.exo_01_basic_banner,
             Modifier
                 .fillMaxWidth()
                 .height(200.dp)
@@ -129,9 +129,9 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetProfilImage01() {
-        return GetImage01(
-            R.drawable.basic_profile, R.string.image_description,
+    fun GetProfilImage() {
+        return GetImage(
+            R.drawable.exo_01_basic_profile, R.string.exo_01_basic_profil,
             Modifier
                 .padding(3.dp)
                 .border(2.dp, Color.White, CircleShape)
@@ -141,15 +141,15 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetBackground01() {
-        return GetImage01(
-            R.drawable.basic_background, R.string.image_description,
+    fun GetBackground() {
+        return GetImage(
+            R.drawable.exo_01_basic_background, R.string.exo_01_basic_background,
             Modifier.fillMaxHeight()
         )
     }
 
     @Composable
-    fun GetImage01(resource: Int, description: Int, modifier: Modifier) {
+    fun GetImage(resource: Int, description: Int, modifier: Modifier) {
         return Image(                                     // IMAGE
             painter = painterResource(resource),
             contentDescription = stringResource(description),
@@ -159,7 +159,7 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetText01(resource: Int, fontSize: Int, textAlign: TextAlign) {
+    fun GetText(resource: Int, fontSize: Int, textAlign: TextAlign) {
         return Text(                                        // TEXT
             text = stringResource(resource),
             color = Color.LightGray,

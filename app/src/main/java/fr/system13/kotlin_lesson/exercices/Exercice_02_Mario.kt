@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -37,94 +38,103 @@ class Exercice_02_Mario : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                ScaffoldComposable02()
+                GetScaffold()
             }
         }
     }
-}
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview02() {
-    KotlinLessonTheme {
-        ScaffoldComposable02()
+    @Preview(showBackground = true)
+    @Composable
+    fun Preview() {
+        KotlinLessonTheme {
+            GetScaffold()
+        }
     }
-}
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Composable
-fun ScaffoldComposable02() {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
-        Scaffold(
-            topBar = { AppBar02() },
-            content = { Body02(name = "Mario") }
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    @Composable
+    fun GetScaffold() {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            Scaffold(
+                topBar = { GetAppBar() },
+                content = { GetBody(name = "Mario") }
+            )
+        }
+    }
+
+    @OptIn(ExperimentalMaterial3Api::class)
+    @Composable
+    fun GetAppBar() {
+        TopAppBar(
+            title = {
+                Text(
+                    text = "Mario",
+                    style = MaterialTheme.typography.headlineSmall,
+                )
+            },
+            navigationIcon = {
+                Image(
+                    painter = painterResource(id = R.drawable.exo_02_mario_appstore),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .padding(8.dp)
+                        .clip(Shapes.medium)
+                )
+            }
         )
     }
-}
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun AppBar02() {
-    TopAppBar(
-        title = {
-            Text(
-                text = "Mario",
-                style = MaterialTheme.typography.headlineSmall,
-            )
-        },
-        navigationIcon = {
-            Image(
-                painter = painterResource(id = R.drawable.mario_appstore),
-                contentDescription = null,
-                modifier = Modifier
-                    .padding(8.dp)
-                    .clip(Shapes.medium)
-            )
-        }
-    )
-}
+    @SuppressLint("ConfigurationScreenWidthHeight")
+    @Composable
+    fun GetBody(name: String) {
+        val localConfiguration = LocalConfiguration.current
+        val height = localConfiguration.screenHeightDp
+        val width = localConfiguration.screenWidthDp
 
-
-@SuppressLint("ConfigurationScreenWidthHeight")
-@Composable
-fun Body02 (name: String) {
-    val localConfiguration = LocalConfiguration.current
-    val height = localConfiguration.screenHeightDp
-    val width = localConfiguration.screenWidthDp
-
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "It's a me!: $name", style = MaterialTheme.typography.headlineMedium)
-        Surface(
-            shadowElevation = 12.dp,
-            modifier = Modifier.width((width * 0.66).dp),
-            shape = Shapes.small
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceEvenly,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Image(
-                    painter = painterResource(id = R.drawable.mario_profile),
-                    contentDescription = "Image Mario",
-                    modifier = Modifier
-                        .height((height / 5).dp)
-                        .width((height / 5).dp)
-                        .padding(25.dp)
-                        .clip(Shapes.large)
-                )
-                Text(text = name, style = MaterialTheme.typography.headlineLarge, color = MaterialTheme.colorScheme.secondary, modifier = Modifier.padding(top = 8.dp, bottom = 8.dp))
-                HorizontalDivider()
-                Text(
-                    "Je suis un plombier d'une quarantaine d'années vivant à New York City.\nMa grande passion? \n Passer quelques temps à Champignon city pour sauver des princesses et jouer avec des carapaces de tortues",
-                    modifier = Modifier.padding(top = 8.dp, bottom = 8.dp, start = 16.dp, end = 16.dp),
-                    textAlign = TextAlign.Left
-                )
+            Text(text = "It's a me!: $name", style = MaterialTheme.typography.headlineMedium)
+            Surface(
+                shadowElevation = 12.dp,
+                modifier = Modifier.width((width * 0.66).dp),
+                shape = Shapes.small
+            ) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Image(
+                        painter = painterResource(id = R.drawable.exo_02_mario_profile),
+                        contentDescription = stringResource(R.string.exo_02_mario_profil),
+                        modifier = Modifier
+                            .height((height / 5).dp)
+                            .width((height / 5).dp)
+                            .padding(25.dp)
+                            .clip(Shapes.large)
+                    )
+                    Text(
+                        text = name,
+                        style = MaterialTheme.typography.headlineLarge,
+                        color = MaterialTheme.colorScheme.secondary,
+                        modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
+                    )
+                    HorizontalDivider()
+                    Text(
+                        stringResource(R.string.exo_02_mario_description),
+                        modifier = Modifier.padding(
+                            top = 8.dp,
+                            bottom = 8.dp,
+                            start = 16.dp,
+                            end = 16.dp
+                        ),
+                        textAlign = TextAlign.Left
+                    )
+                }
             }
+            Spacer(modifier = Modifier)
         }
-        Spacer(modifier = Modifier)
     }
 }

@@ -17,7 +17,6 @@ import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -35,8 +34,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import fr.system13.kotlin_lesson.R
 import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
 import fr.system13.kotlin_lesson.ui.theme.Shapes
 
@@ -45,85 +46,111 @@ class Exercice_03_Button : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                ScaffoldComposable03()
+                GetScaffold()
             }
         }
     }
-}
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview03() {
-    KotlinLessonTheme {
-        ScaffoldComposable03()
+    @Preview(showBackground = true)
+    @Composable
+    fun Preview() {
+        KotlinLessonTheme {
+            GetScaffold()
+        }
     }
-}
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Composable
-fun ScaffoldComposable03() {
-    Surface(
-        modifier = Modifier.fillMaxSize(),
-        color = MaterialTheme.colorScheme.background
-    ) {
-        Scaffold(
-            content = { Body03() }
-        )
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+    @Composable
+    private fun GetScaffold() {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            Scaffold(
+                content = { GetBody() }
+            )
+        }
     }
-}
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun Body03() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        var fruits = listOf("Banane", "Pomme", "Kiwi", "Fraise", "Ananas", "Poire", "Raisin")
-        var index by remember { mutableIntStateOf(0) }
-        var count by remember { mutableIntStateOf(0) }
-        var color by remember { mutableStateOf(Color.White) }
+    @Composable
+    fun GetBody() {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceEvenly,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            val fruits = listOf("Banane", "Pomme", "Kiwi", "Fraise", "Ananas", "Poire", "Raisin")
+            var index by remember { mutableIntStateOf(0) }
+            var count by remember { mutableIntStateOf(0) }
+            var color by remember { mutableStateOf(Color.White) }
 
-        val click: (Boolean) -> Unit = {
-            if (it) {
-                if (index < fruits.size - 1) index++
-            } else {
-                if (index > 0) index--
+            val click: (Boolean) -> Unit = {
+                if (it) {
+                    if (index < fruits.size - 1) index++
+                } else {
+                    if (index > 0) index--
+                }
             }
-        }
 
-        Text(text = "J'aime le fruit : ${fruits[index]}", color = color)
-        Row {
-            IconButton(enabled = index < fruits.size - 1, onClick = { click(true) }) { Icon(imageVector = Icons.Default.KeyboardArrowUp, contentDescription = "Ajouter un click") }
-            IconButton(enabled = index > 0, onClick = { click(false) }) { Icon(imageVector = Icons.Default.KeyboardArrowDown, contentDescription = "Supprimer un click") }
-        }
-
-        TextButton(
-            shape = Shapes.small,
-            elevation = ButtonDefaults.buttonElevation(
-                defaultElevation = 8.dp
-            ),
-            onClick = {
-                color = if (color == Color.White) {
-                    Color.Yellow
-                } else
-                    Color.White
-            }) { Text("Changer la couleur", color = color) }
-
-
-        Button(
-            shape = Shapes.small,
-            border = BorderStroke(width = 4.dp, color = Color.DarkGray),
-            onClick = { count++ }) {
+            Text(text = stringResource(R.string.exo_03_button_text, fruits[index]), color = color)
             Row {
-                Icon(imageVector = Icons.Default.Add, contentDescription = "Ajouter un click")
-                Text("Nb de click : $count")
+                IconButton(enabled = index < fruits.size - 1, onClick = { click(true) }) {
+                    Icon(
+                        imageVector = Icons.Default.KeyboardArrowUp,
+                        contentDescription = "Ajouter un click"
+                    )
+                }
+                IconButton(
+                    enabled = index > 0,
+                    onClick = { click(false) }) {
+                    Icon(
+                        imageVector = Icons.Default.KeyboardArrowDown,
+                        contentDescription = "Supprimer un click"
+                    )
+                }
             }
-        }
-        Row {
-            FloatingActionButton(onClick = { count = 0 }) { Icon(imageVector = Icons.Default.Refresh, contentDescription = "Remettre à zéro") }
-            FloatingActionButton(onClick = { index = fruits.indices.random() }) { Icon(imageVector = Icons.Default.Favorite, contentDescription = "Remettre à zéro") }
+
+            TextButton(
+                shape = Shapes.small,
+                elevation = ButtonDefaults.buttonElevation(
+                    defaultElevation = 8.dp
+                ),
+                onClick = {
+                    color = if (color == Color.White) {
+                        Color.Yellow
+                    } else
+                        Color.White
+                }) { Text(stringResource(R.string.exo_03_button_change_color), color = color) }
+
+
+            Button(
+                shape = Shapes.small,
+                border = BorderStroke(width = 4.dp, color = Color.DarkGray),
+                onClick = { count++ }) {
+                Row {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = stringResource(R.string.exo_03_button_add_click)
+                    )
+                    Text(stringResource(R.string.exo_03_button_clicks_count, count))
+                }
+            }
+            Row {
+                FloatingActionButton(onClick = { count = 0 }) {
+                    Icon(
+                        imageVector = Icons.Default.Refresh, contentDescription = stringResource(
+                            R.string.exo_03_button_reset
+                        )
+                    )
+                }
+                FloatingActionButton(onClick = { index = fruits.indices.random() }) {
+                    Icon(
+                        imageVector = Icons.Default.Favorite, contentDescription = stringResource(
+                            R.string.exo_03_button_randomize
+                        )
+                    )
+                }
+            }
         }
     }
 }
