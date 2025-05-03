@@ -37,7 +37,7 @@ class Exercice_02_Mario : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            KotlinLessonTheme {
+            KotlinLessonTheme(isMario = true) {
                 GetScaffold()
             }
         }
@@ -46,7 +46,7 @@ class Exercice_02_Mario : ComponentActivity() {
     @Preview(showBackground = true)
     @Composable
     fun Preview() {
-        KotlinLessonTheme {
+        KotlinLessonTheme(isMario = true) {
             GetScaffold()
         }
     }
