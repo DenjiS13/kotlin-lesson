@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.lessons
+package fr.system13.kotlin.lessons
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalConfiguration
-import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.ui.theme.KotlinLessonTheme
 
 class G_JetPackCompose : ComponentActivity() {
 

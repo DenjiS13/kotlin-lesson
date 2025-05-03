@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.ui.theme
+package fr.system13.kotlin.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -7,7 +7,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import fr.system13.kotlin_lesson.R
+import fr.system13.kotlin.R
 
 val mario_super_mario_font = FontFamily(
     Font(R.font.mario_super_mario, FontWeight.Normal)

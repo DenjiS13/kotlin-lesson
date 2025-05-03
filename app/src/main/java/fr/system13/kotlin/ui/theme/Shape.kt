@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.ui.theme
+package fr.system13.kotlin.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

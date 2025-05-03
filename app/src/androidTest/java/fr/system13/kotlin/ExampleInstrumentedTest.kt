@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson
+package fr.system13.kotlin
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

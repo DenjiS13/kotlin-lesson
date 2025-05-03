@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kotlin : My first app</string>
+    <string name="app_name">Kotlin lessons</string>
     <string name="exo_01_basic_name">Ferdinand Croquelois</string>
     <string name="exo_01_basic_banner">Bandeau</string>
     <string name="exo_01_basic_background">Fond</string>

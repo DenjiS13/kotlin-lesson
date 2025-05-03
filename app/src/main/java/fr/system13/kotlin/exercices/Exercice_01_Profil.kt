@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.exercices
+package fr.system13.kotlin.exercices
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -34,8 +34,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import fr.system13.kotlin_lesson.R
-import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.R
 
 class Exercice_01_Profil : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +44,7 @@ class Exercice_01_Profil : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             KotlinLessonTheme {
-                GetSurface()
+                ProfilSurface()
             }
         }
     }
@@ -53,12 +53,12 @@ class Exercice_01_Profil : ComponentActivity() {
     @Composable
     fun Preview() {
         KotlinLessonTheme {
-            GetSurface()
+            ProfilSurface()
         }
     }
 
     @Composable
-    fun GetSurface() {
+    fun ProfilSurface() {
         Surface {                                           // SURFACE
             Column(                                         // COLUMN
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -66,30 +66,30 @@ class Exercice_01_Profil : ComponentActivity() {
                 modifier = Modifier.fillMaxHeight()
             )
             {
-                GetBanner()
-                GetBox()
+                ProfilBanner()
+                ProfilBox()
             }
         }
     }
 
     @Composable
-    fun GetBox() {
+    fun ProfilBox() {
         Box(                                                    // BOX
             modifier = Modifier.fillMaxWidth(),
             propagateMinConstraints = false,
             contentAlignment = Alignment.TopStart
         )
         {
-            GetBackground()
-            GetColumn()
+            ProfilBackground()
+            ProfilColumn()
         }
     }
 
     @Composable
-    fun GetColumn() {
+    fun ProfilColumn() {
         Column(Modifier.padding(12.dp)) {                   // COLUMN
 
-            GetRow()
+            ProfilRow()
             // Ligne de séparation
             HorizontalDivider(                              // HORIZONTAL DIVIDER
                 color = Color.LightGray, thickness = 1.dp,
@@ -97,7 +97,7 @@ class Exercice_01_Profil : ComponentActivity() {
                     .fillMaxWidth()
                     .padding(12.dp)
             )
-            GetText(R.string.exo_01_basic_content, 16, TextAlign.Center)
+            ProfilText(R.string.exo_01_basic_content, 16, TextAlign.Center)
 
             // Espacement
             Spacer(modifier = Modifier.height(20.dp))       // SPACER
@@ -105,22 +105,22 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetRow() {
+    fun ProfilRow() {
         Row(                                                // ROW
             verticalAlignment = Alignment.Bottom,
             horizontalArrangement = Arrangement.SpaceEvenly,
             modifier = Modifier.fillMaxWidth()
         )
         {
-            GetProfilImage()
+            ProfilImage()
             // Ligne d'icônes
-            GetText(R.string.exo_01_basic_name, 24, TextAlign.Right)
+            ProfilText(R.string.exo_01_basic_name, 24, TextAlign.Right)
         }
     }
 
     @Composable
-    fun GetBanner() {
-        return GetImage(
+    fun ProfilBanner() {
+        return MyImage(
             R.drawable.exo_01_basic_banner, R.string.exo_01_basic_banner,
             Modifier
                 .fillMaxWidth()
@@ -129,8 +129,8 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetProfilImage() {
-        return GetImage(
+    fun ProfilImage() {
+        return MyImage(
             R.drawable.exo_01_basic_profile, R.string.exo_01_basic_profil,
             Modifier
                 .padding(3.dp)
@@ -141,15 +141,15 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetBackground() {
-        return GetImage(
+    fun ProfilBackground() {
+        return MyImage(
             R.drawable.exo_01_basic_background, R.string.exo_01_basic_background,
             Modifier.fillMaxHeight()
         )
     }
 
     @Composable
-    fun GetImage(resource: Int, description: Int, modifier: Modifier) {
+    fun MyImage(resource: Int, description: Int, modifier: Modifier) {
         return Image(                                     // IMAGE
             painter = painterResource(resource),
             contentDescription = stringResource(description),
@@ -159,7 +159,7 @@ class Exercice_01_Profil : ComponentActivity() {
     }
 
     @Composable
-    fun GetText(resource: Int, fontSize: Int, textAlign: TextAlign) {
+    fun ProfilText(resource: Int, fontSize: Int, textAlign: TextAlign) {
         return Text(                                        // TEXT
             text = stringResource(resource),
             color = Color.LightGray,

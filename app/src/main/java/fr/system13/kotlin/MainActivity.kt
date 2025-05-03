@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson
+package fr.system13.kotlin
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -32,14 +32,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.ui.theme.KotlinLessonTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                GetScaffold()
+                FieldsScaffold()
             }
         }
     }
@@ -48,13 +48,13 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun DefaultPreview() {
         KotlinLessonTheme {
-            GetScaffold()
+            FieldsScaffold()
         }
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
-    fun GetScaffold() {
+    fun FieldsScaffold() {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
@@ -62,14 +62,14 @@ class MainActivity : ComponentActivity() {
             Scaffold()
             { contentPadding ->
                 Column(modifier = Modifier.padding(contentPadding)) {
-                    Body()
+                    FieldsBody()
                 }
             }
         }
     }
 
     @Composable
-    fun Body() {
+    fun FieldsBody() {
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Top,
@@ -79,13 +79,13 @@ class MainActivity : ComponentActivity() {
             var firstnameString by remember { mutableStateOf("") }
 
 
-            GetNameTextField(nameString = nameString, onValueChange = { nameString = it })
-            GetFirstNameTextField(firstnameString = firstnameString, onValueChange = { firstnameString = it })
+            NameTextField(nameString = nameString, onValueChange = { nameString = it })
+            FirstNameTextField(firstnameString = firstnameString, onValueChange = { firstnameString = it })
         }
     }
 
     @Composable
-    fun GetFirstNameTextField(firstnameString: String, onValueChange: (String) -> Unit) {
+    fun FirstNameTextField(firstnameString: String, onValueChange: (String) -> Unit) {
 
         val error = firstnameString == ""
 
@@ -130,7 +130,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun GetNameTextField(nameString: String, onValueChange: (String) -> Unit) {
+    fun NameTextField(nameString: String, onValueChange: (String) -> Unit) {
         TextField(
             value = nameString,
             onValueChange = onValueChange,

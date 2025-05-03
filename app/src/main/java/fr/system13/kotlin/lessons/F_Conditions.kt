@@ -1,6 +1,6 @@
-package fr.system13.kotlin_lesson.lessons
+package fr.system13.kotlin.lessons
 
-import fr.system13.kotlin_lesson.Logger
+import fr.system13.kotlin.Logger
 
 class F_Conditions {
 

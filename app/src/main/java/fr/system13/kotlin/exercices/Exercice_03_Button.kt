@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.exercices
+package fr.system13.kotlin.exercices
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -37,16 +37,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_lesson.R
-import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
-import fr.system13.kotlin_lesson.ui.theme.Shapes
+import fr.system13.kotlin.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.ui.theme.Shapes
+import fr.system13.kotlin.R
 
 class Exercice_03_Button : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                GetScaffold()
+                ButtonScaffold()
             }
         }
     }
@@ -55,25 +55,25 @@ class Exercice_03_Button : ComponentActivity() {
     @Composable
     fun Preview() {
         KotlinLessonTheme {
-            GetScaffold()
+            ButtonScaffold()
         }
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
-    private fun GetScaffold() {
+    private fun ButtonScaffold() {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
             Scaffold(
-                content = { GetBody() }
+                content = { ButtonBody() }
             )
         }
     }
 
     @Composable
-    fun GetBody() {
+    fun ButtonBody() {
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.SpaceEvenly,

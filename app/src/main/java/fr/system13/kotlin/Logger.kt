@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson
+package fr.system13.kotlin
 
 import android.util.Log
 

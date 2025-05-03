@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.exercices
+package fr.system13.kotlin.exercices
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -29,16 +29,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_lesson.R
-import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
-import fr.system13.kotlin_lesson.ui.theme.Shapes
+import fr.system13.kotlin.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.ui.theme.Shapes
+import fr.system13.kotlin.R
 
 class Exercice_02_Mario : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme(isMario = true) {
-                GetScaffold()
+                MarioScaffold()
             }
         }
     }
@@ -47,27 +47,27 @@ class Exercice_02_Mario : ComponentActivity() {
     @Composable
     fun Preview() {
         KotlinLessonTheme(isMario = true) {
-            GetScaffold()
+           MarioScaffold()
         }
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
-    fun GetScaffold() {
+    fun MarioScaffold() {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
             Scaffold(
-                topBar = { GetAppBar() },
-                content = { GetBody(name = "Mario") }
+                topBar = { MarioAppBar() },
+                content = { MarioBody(name = "Mario") }
             )
         }
     }
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    fun GetAppBar() {
+    fun MarioAppBar() {
         TopAppBar(
             title = {
                 Text(
@@ -89,7 +89,7 @@ class Exercice_02_Mario : ComponentActivity() {
 
     @SuppressLint("ConfigurationScreenWidthHeight")
     @Composable
-    fun GetBody(name: String) {
+    fun MarioBody(name: String) {
         val localConfiguration = LocalConfiguration.current
         val height = localConfiguration.screenHeightDp
         val width = localConfiguration.screenWidthDp

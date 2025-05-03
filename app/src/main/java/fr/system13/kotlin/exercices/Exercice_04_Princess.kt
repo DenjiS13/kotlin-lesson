@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.exercices
+package fr.system13.kotlin.exercices
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -42,18 +42,18 @@ import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import fr.system13.kotlin_lesson.R
-import fr.system13.kotlin_lesson.lessons.screeHeight
-import fr.system13.kotlin_lesson.lessons.screenWidth
-import fr.system13.kotlin_lesson.ui.theme.KotlinLessonTheme
-import fr.system13.kotlin_lesson.ui.theme.Shapes
+import fr.system13.kotlin.lessons.screeHeight
+import fr.system13.kotlin.lessons.screenWidth
+import fr.system13.kotlin.ui.theme.KotlinLessonTheme
+import fr.system13.kotlin.ui.theme.Shapes
+import fr.system13.kotlin.R
 
 class Exercice_04_Princess : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                GetScaffold()
+                PrincessScaffold()
             }
         }
     }
@@ -62,24 +62,24 @@ class Exercice_04_Princess : ComponentActivity() {
     @Composable
     fun DefaultPreview() {
         KotlinLessonTheme {
-            GetScaffold()
+            PrincessScaffold()
         }
     }
 
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
-    fun GetScaffold() {
+    fun PrincessScaffold() {
         Surface(
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
             Scaffold(
-                topBar = { GetAppBar() },
+                topBar = { PrincessAppBar() },
 
                 )
             { contentPadding ->
                 Column(modifier = Modifier.padding(contentPadding)) {
-                    GetBody()
+                    PrincessBody()
                 }
             }
         }
@@ -87,7 +87,7 @@ class Exercice_04_Princess : ComponentActivity() {
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
-    fun GetAppBar() {
+    fun PrincessAppBar() {
         TopAppBar(
             title = {
                 Text(
@@ -99,7 +99,7 @@ class Exercice_04_Princess : ComponentActivity() {
     }
 
     @Composable
-    fun GetBody() {
+    fun PrincessBody() {
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.SpaceBetween,

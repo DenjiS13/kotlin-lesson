@@ -1,4 +1,4 @@
-package fr.system13.kotlin_lesson.ui.theme
+package fr.system13.kotlin.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
