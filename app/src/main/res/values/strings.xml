@@ -18,4 +18,15 @@
     <string name="exo_04_princess_go">C\'est parti !</string>
     <string name="exo_04_princess_response_default">… Encore personne !</string>
     <string name="exo_04_princess_reset">Remettre à zéro</string>
+    <string name="exo_05_fields_name_placeholder">Entrez votre nom</string>
+    <string name="exo_05_fields_name_label">Nom"</string>
+    <string name="exo_05_fields_password_placeholder">Entrez votre mot de passe</string>
+    <string name="exo_05_fields_password_label">Mot de passe"</string>
+    <string name="exo_05_fields_firstname_placeholder">Entrez votre prénom</string>
+    <string name="exo_05_fields_firstname_label">Prénom"</string>
+    <string name="exo_05_fields_is_kotlin_cool_yes">Kotlin est cool !</string>
+    <string name="exo_05_fields_is_kotlin_cool_no">Je préfère Java</string>
+    <string name="exo_05_fields_age">Vous avez %1$s ans</string>
+    <string name="exo_05_fields_stepper">Nombre : %1$s</string>
+    <string name="exo_06_calories_appbar">Mes besoins caloriques</string>
 </resources>
