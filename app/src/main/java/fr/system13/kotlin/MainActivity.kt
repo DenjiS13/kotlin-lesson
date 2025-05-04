@@ -81,7 +81,6 @@ class MainActivity : ComponentActivity() {
                 verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-
             }
         }
     }

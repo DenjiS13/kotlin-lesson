@@ -29,4 +29,14 @@
     <string name="exo_05_fields_age">Vous avez %1$s ans</string>
     <string name="exo_05_fields_stepper">Nombre : %1$s</string>
     <string name="exo_06_calories_appbar">Mes besoins caloriques</string>
+    <string name="exo_06_calories_name_placeholder">Entrez votre nom</string>
+    <string name="exo_06_calories_name_label">Nom"</string>
+    <string name="exo_06_calories_age_placeholder">Entrez votre âge</string>
+    <string name="exo_06_calories_age_label">Âge"</string>
+    <string name="exo_06_calories_gender_male">Homme</string>
+    <string name="exo_06_calories_gender_female">Femme"</string>
+    <string name="exo_06_calories_weight">Poids : %1$s kg"</string>
+    <string name="exo_06_calories_size">Taille : %1$s cm"</string>
+    <string name="exo_06_calories_calc">Calculer</string>
+    <string name="exo_06_calories_result">%1$s,\nvous avez besoin de %2$d calories journalières</string>
 </resources>
