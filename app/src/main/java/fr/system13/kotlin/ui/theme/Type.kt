@@ -13,6 +13,10 @@ val mario_super_mario_font = FontFamily(
     Font(R.font.mario_super_mario, FontWeight.Normal)
 )
 
+val stranger_font = FontFamily(
+    Font(R.font.stranger_corpus_gaii_caps, FontWeight.Normal)
+)
+
 val mario_philosopher_font = FontFamily(
     Font(R.font.mario_philosopher_regular, FontWeight.Normal),
     Font(R.font.mario_philosopher_bold, FontWeight.Bold),
@@ -42,6 +46,20 @@ val Typography = Typography(
         fontSize = 11.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
+    ),
+    headlineMedium = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Medium,
+        fontSize = 20.sp,
+        lineHeight = 28.sp,
+        letterSpacing = 0.sp
+    ),
+    titleMedium = TextStyle(
+        fontFamily = stranger_font,
+        fontWeight = FontWeight.Normal,
+        fontSize =20 .sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.4.sp
     )
 )
 

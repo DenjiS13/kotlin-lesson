@@ -7,6 +7,7 @@ import fr.system13.kotlin.lessons.D_Functions
 import fr.system13.kotlin.lessons.E_Loops
 import fr.system13.kotlin.lessons.F_Conditions
 import fr.system13.kotlin.lessons.H_Lambda
+import fr.system13.kotlin.lessons.I_Objects
 
 class Exercice_00 {
 
@@ -19,5 +20,6 @@ class Exercice_00 {
         F_Conditions().callAll()
         //G_JetPackCompose()
         H_Lambda().callAll()
+        I_Objects().callAll()
     }
 }

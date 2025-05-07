@@ -1,23 +1,28 @@
 <resources>
     <string name="app_name">Kotlin lessons</string>
+    <!-- Exo 01 Basic -->
     <string name="exo_01_basic_name">Ferdinand Croquelois</string>
     <string name="exo_01_basic_banner">Bandeau</string>
     <string name="exo_01_basic_background">Fond</string>
     <string name="exo_01_basic_profil">Profil</string>
     <string name="exo_01_basic_content">Salut les codeurs, moi c\'est Ferdinand,\nje suis ici pour apprendre le développement d\'applications Android\navec Kotlin et le framework Jetpack Compose</string>
+    <!-- Exo 02 Mario -->
     <string name="exo_02_mario_profil">Image Mario</string>
-    <string name="exo_02_mario_description">Je suis un plombier d\'une quarantaine d\'années vivant à New York City.\nMa grande passion? \n Passer quelques temps à Champignon city pour sauver des princesses et jouer avec des carapaces de tortues</string>
+    <string name="exo_02_mario_description">Je suis un plombier vivant à New York City.\nMa grande passion? \n Passer quelques temps à Champignon city pour sauver des princesses et jouer avec des carapaces de tortues</string>
+    <!-- Exo 03 Button -->
     <string name="exo_03_button_add_click">Ajouter un click</string>
     <string name="exo_03_button_text">J\'aime le fruit : %1$s</string>
     <string name="exo_03_button_change_color">Changer la couleur</string>
     <string name="exo_03_button_clicks_count">Nb de click : %1$s</string>
     <string name="exo_03_button_reset">Remettre à zéro</string>
     <string name="exo_03_button_randomize">Fruit aléatoire</string>
+    <!-- Exo 04 Princess -->
     <string name="exo_04_princess_top_bar">Quelle princess êtes-vous ?</string>
     <string name="exo_04_princess_response">Vous êtes %1$s</string>
     <string name="exo_04_princess_go">C\'est parti !</string>
     <string name="exo_04_princess_response_default">… Encore personne !</string>
     <string name="exo_04_princess_reset">Remettre à zéro</string>
+    <!-- Exo 05 Fields -->
     <string name="exo_05_fields_name_placeholder">Entrez votre nom</string>
     <string name="exo_05_fields_name_label">Nom"</string>
     <string name="exo_05_fields_password_placeholder">Entrez votre mot de passe</string>
@@ -28,6 +33,7 @@
     <string name="exo_05_fields_is_kotlin_cool_no">Je préfère Java</string>
     <string name="exo_05_fields_age">Vous avez %1$s ans</string>
     <string name="exo_05_fields_stepper">Nombre : %1$s</string>
+    <!--    Exo 06 Calories-->
     <string name="exo_06_calories_appbar">Mes besoins caloriques</string>
     <string name="exo_06_calories_name_placeholder">Entrez votre nom</string>
     <string name="exo_06_calories_name_label">Nom"</string>
@@ -39,4 +45,19 @@
     <string name="exo_06_calories_size">Taille : %1$s cm"</string>
     <string name="exo_06_calories_calc">Calculer</string>
     <string name="exo_06_calories_result">%1$s,\nvous avez besoin de %2$d calories journalières</string>
+    <!--Exo 07 Message-->
+    <string name="exo_07_message_alban">Alban</string>
+    <string name="exo_07_message_alice">Alice</string>
+    <string name="exo_07_message_arthur">Arthur</string>
+    <string name="exo_07_message_bernard">Bernard</string>
+    <string name="exo_07_message_celia">Célia</string>
+    <string name="exo_07_message_clara">Clara</string>
+    <string name="exo_07_message_jose">José</string>
+    <string name="exo_07_message_leo">Léo</string>
+    <string name="exo_07_message_maxime">Maxime</string>
+    <string name="exo_07_message_nico">Nico</string>
+    <string name="exo_07_message_pierre">Pierre</string>
+    <string name="exo_07_message_simon">Simon</string>
+    <string name="exo_07_message_vanessa">Vanessa</string>
+
 </resources>
