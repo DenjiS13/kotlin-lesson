@@ -1,0 +1,102 @@
+[33mcommit f86097875e80240efaa539c49f2abc8f3781a3da[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31mgithub/master[m[33m)[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Wed May 7 17:07:25 2025 +0200
+
+    Ajout exercie 08 Stranger
+
+[33mcommit 7ee90cfa942705a1adf50e751361b94c1b7a8436[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Sun May 4 11:27:13 2025 +0200
+
+    Ajout de l'exercice 06 Calories
+
+[33mcommit a95e4e99c4db1fcf0ce3376ce463ffd610146119[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Sat May 3 22:22:02 2025 +0200
+
+    Remplacement des strings en dur par des ressources
+
+[33mcommit 40105e15e8e0b04d7a26cbc3d373b6d5da82d86a[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Sat May 3 19:22:59 2025 +0200
+
+    Ajout des contôles de saisie de base
+
+[33mcommit 0ccc6f685f1f636f066513ed1e509d039bb9586d[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Sat May 3 11:32:15 2025 +0200
+
+    Ajout des KeyboardActions
+
+[33mcommit 82560c5add2977916bb04b25e582c5a41f7468c3[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Sat May 3 11:02:38 2025 +0200
+
+    Refacto : suivi des conventions de nommage (pas toutes)
+
+[33mcommit a562e8298e735d4ccc5a5b494f8fe508e7c8baff[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Sat May 3 09:52:17 2025 +0200
+
+    Ajout TextField et OutlineTextField
+
+[33mcommit 8e5357547b284034911886995a2d755fd9cccba2[m
+Author: Ferdinand <ferdi.croquel@wanadoo.fr>
+Date:   Fri May 2 21:04:15 2025 +0200
+
+    Ajout exercice Princess et refacto
+
+[33mcommit dffc266541602cf340b26afa0f64eb1879c775bc[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 21:13:12 2025 +0200
+
+    Cours sur les boutons
+
+[33mcommit 117922a360605ffd5d2705ddeac79da7cfbfeff1[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 18:11:04 2025 +0200
+
+    Nettoyage (fin)
+
+[33mcommit 94bab468b5e0767a6df019ea52019d3f48eb6c9e[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 17:38:36 2025 +0200
+
+    Nettoyage (fin... normalement)
+
+[33mcommit 9ee82fa811aeac6a457d7ec5461730ad12d680f8[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 17:28:09 2025 +0200
+
+    Nettoyage (suite)
+
+[33mcommit f6217ae2a059fcee29b0fc0d9ea3a816d897edc5[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 16:19:07 2025 +0200
+
+    Nettoyage
+
+[33mcommit 1743b6b4e6095d3c23bbcf3b473d1aca92056279[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 15:53:42 2025 +0200
+
+    Renommage de l'application de Kotlin_1_MyFirstApp vers KotlinLesson
+
+[33mcommit 3d9510d4c969ff7f60380528af60e9b1e591cc15[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 15:47:17 2025 +0200
+
+    Renommage de l'application de Kotlin_1_MyFirstApp vers KotlinLesson
+
+[33mcommit e18fb1f2c273c06e3515bc5ae386c16ec4296bfb[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sun Apr 27 14:00:31 2025 +0200
+
+    Stockage des exercices 01_Profil et 02_Mario.
+    Ajout des lessons G_JetPackCompose et H_Lambda.
+
+[33mcommit 0426e7e0501e73e85c52b300abbfe69f64254ac4[m
+Author: denji <denji13@hotmail.fr>
+Date:   Sat Apr 26 10:09:10 2025 +0200
+
+    Premier commit
