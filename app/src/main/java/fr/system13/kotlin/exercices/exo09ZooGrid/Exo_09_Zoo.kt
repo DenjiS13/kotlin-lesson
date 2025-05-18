@@ -1,19 +1,19 @@
-package fr.system13.kotlin
+package fr.system13.kotlin.exercices.exo09ZooGrid
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import fr.system13.kotlin.exercices.exo10RestoNavigation.ui.composable.Exo_10_RestoHome
+import fr.system13.kotlin.exercices.exo09ZooGrid.ui.composable.ZooScaffold
 import fr.system13.kotlin.ui.theme.KotlinLessonTheme
 
-class MainActivity : ComponentActivity() {
+class Exo_09_Zoo : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             KotlinLessonTheme {
-                Exo_10_RestoHome()
+                ZooScaffold()
             }
         }
     }
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun DefaultPreview() {
         KotlinLessonTheme {
-            Exo_10_RestoHome()
+            ZooScaffold()
         }
     }
 }
