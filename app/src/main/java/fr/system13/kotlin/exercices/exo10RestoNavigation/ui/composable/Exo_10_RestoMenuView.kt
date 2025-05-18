@@ -26,15 +26,13 @@ import fr.system13.kotlin.exercices.exo10RestoNavigation.data.Exo_10_RestoDataSe
 import fr.system13.kotlin.exercices.exo10RestoNavigation.model.Exo_10_RestoMenu
 
 @Composable
-fun RestoMenuView(menu: Exo_10_RestoMenu) {
+fun RestoMenuView(menu: Exo_10_RestoMenu, onClick: (Exo_10_RestoMenu) -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height((LocalConfiguration.current.screenHeightDp / 3).dp)
             .padding(start = 4.dp, end = 4.dp, bottom = 4.dp)
-            .clickable {
-
-            },
+            .clickable { onClick(menu) },
         contentAlignment = Alignment.Center
     )
     {
@@ -62,5 +60,5 @@ fun RestoMenuView(menu: Exo_10_RestoMenu) {
 @Preview(showBackground = true)
 @Composable
 fun RestoMenuViewPreview() {
-    RestoMenuView(Exo_10_RestoDataService().americain)
+    RestoMenuView(Exo_10_RestoDataService().americain, onClick = {})
 }

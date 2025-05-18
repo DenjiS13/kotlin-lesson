@@ -19,7 +19,7 @@ import fr.system13.kotlin.exercices.exo10RestoNavigation.data.Exo_10_RestoDataSe
 import fr.system13.kotlin.exercices.exo10RestoNavigation.model.Exo_10_RestoItem
 
 @Composable
-fun RestoItemView(item: Exo_10_RestoItem, buttonTitle: String) {
+fun RestoItemView(item: Exo_10_RestoItem, buttonTitle: String, onClick: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -38,12 +38,12 @@ fun RestoItemView(item: Exo_10_RestoItem, buttonTitle: String) {
 
         Image(painter = painterResource(item.image), contentDescription = item.name)
 
-        Button(onClick = {}) { Text(text = buttonTitle) }
+        Button(onClick = onClick) { Text(text = buttonTitle) }
     }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun RestoItemViewPreview() {
-    RestoItemView(Exo_10_RestoDataService().burger, "Suivant")
+    RestoItemView(Exo_10_RestoDataService().burger, "Suivant", {})
 }
