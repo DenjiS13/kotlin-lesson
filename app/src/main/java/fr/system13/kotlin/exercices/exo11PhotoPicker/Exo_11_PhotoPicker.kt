@@ -1,4 +1,4 @@
-package fr.system13.kotlin
+package fr.system13.kotlin.exercices.exo11PhotoPicker
 
 import android.net.Uri
 import android.os.Bundle
@@ -35,7 +35,7 @@ import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.size.Size
 
-class MainActivity : ComponentActivity() {
+class Exo_11_PhotoPicker : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
