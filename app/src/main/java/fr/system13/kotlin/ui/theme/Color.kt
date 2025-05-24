@@ -17,3 +17,9 @@ val MARIO_BLUE = Color(0xFF1976d2)
 val MARIO_LIGHT_BLUE = Color(0xFF63a4ff)
 var MARIO_DARK_BLUE = Color(0xFF004ba0)
 val MARIO_LIGHT_GRAY = Color(0xFFf5f5f5)
+
+// Couleurs NFL
+val NFL_RED = Color(200, 55, 50, 255)
+val NFL_RED_LIGHT = Color(235, 65, 15, 255)
+val NFL_BLUE = Color(21, 57, 112, 255)
+val NFL_BLUE_LIGHT = Color(135, 190, 225, 255)

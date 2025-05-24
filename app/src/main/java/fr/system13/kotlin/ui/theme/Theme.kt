@@ -50,8 +50,27 @@ private val MarioLightColorScheme = lightColorScheme(
 
 // endregion
 
+// region Mario
+
+private val NflDarkColorScheme = darkColorScheme(
+    primary = NFL_BLUE,
+    secondary = NFL_RED,
+    background = NFL_BLUE_LIGHT,
+    surface = NFL_RED_LIGHT
+)
+
+private val NflLightColorScheme = lightColorScheme(
+    primary = NFL_BLUE,
+    secondary = NFL_RED,
+    background = NFL_BLUE_LIGHT,
+    surface = NFL_RED_LIGHT
+)
+
+// endregion
+
 @Composable
 fun KotlinLessonTheme(
+    isNfl: Boolean = false,
     isMario: Boolean = false,
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
@@ -66,6 +85,8 @@ fun KotlinLessonTheme(
 
         isMario && darkTheme -> MarioDarkColorScheme
         isMario && !darkTheme -> MarioLightColorScheme
+        isNfl && darkTheme -> NflDarkColorScheme
+        isNfl && !darkTheme -> NflLightColorScheme
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
