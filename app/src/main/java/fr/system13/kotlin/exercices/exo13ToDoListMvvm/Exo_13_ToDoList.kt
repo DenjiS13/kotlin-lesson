@@ -1,4 +1,4 @@
-package fr.system13.kotlin
+package fr.system13.kotlin.exercices.exo13ToDoListMvvm
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,12 +8,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import fr.system13.kotlin.exercices.exo13ToDoListMvvm.ui.view.Exo_13_ToDoListScaffold
 import fr.system13.kotlin.ui.theme.KotlinLessonTheme
 
-class MainActivity : ComponentActivity() {
+class Exo_13_ToDoList : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContent {
-            KotlinLessonTheme() {
+            KotlinLessonTheme(isNfl = true) {
                 Exo_13_ToDoListScaffold()
             }
         }
