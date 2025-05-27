@@ -113,4 +113,13 @@ class I_Objects {
         AIR(4, "Air"),
         FIRE(8, "Feu"),
     }
+
+    // Classe scellée
+    // plus de contrôle sur l'héritage : pas d'héritage possible
+    sealed class Elements {
+        object EARTH : Elements()
+        object WATER : Elements()
+        object AIR : Elements()
+        object FIRE : Elements()
+    }
 }

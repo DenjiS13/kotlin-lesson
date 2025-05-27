@@ -21,15 +21,13 @@ fun Exo_10_RestoHome() {
 
     // Création du contrôleur de navigation
     val navigationController = rememberNavController()
+    // Récupération de la dernière entrée de la pile (= l'écran actuel)
+    val backStackEntry by navigationController.currentBackStackEntryAsState()
+    // Récupération de la route actuelle sous forme de Exo_10_RestoScreens
+    val currentScreen = Exo_10_RestoScreen.valueOf(backStackEntry?.destination?.route ?: Exo_10_RestoScreen.Home.name)
 
     // Menu où nous sommes
     var currentMenu: Exo_10_RestoMenu by remember { mutableStateOf(Exo_10_RestoDataService().americain) }
-
-    // Récupération de la dernière entrée de la pile (= l'écran actuel)
-    val backStackEntry by navigationController.currentBackStackEntryAsState()
-
-    // Récupération de la route actuelle sous forme de Exo_10_RestoScreens
-    val currentScreen = Exo_10_RestoScreen.valueOf(backStackEntry?.destination?.route ?: Exo_10_RestoScreen.Home.name)
 
     Scaffold(
         topBar = {
