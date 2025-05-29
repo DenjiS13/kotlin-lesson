@@ -116,10 +116,20 @@ class I_Objects {
 
     // Classe scellée
     // plus de contrôle sur l'héritage : pas d'héritage possible
-    sealed class Elements {
-        object EARTH : Elements()
-        object WATER : Elements()
-        object AIR : Elements()
-        object FIRE : Elements()
+    // Pas d'instanciation possible en dehors de la classe
+    // Les sous-classes doivent être décrites dans le corps de la classe
+    sealed class Shape {
+        // les classes filles doivent avoir un constructeur par défaut
+        class Circle(val radius: Double) : Shape()
+        class Rectangle(val width: Double, val height: Double) : Shape()
+        object NotAShape : Shape()
+    }
+
+    fun describeShape(shape: Shape): String {
+        return when (shape) {
+            is Shape.Circle -> "A circle with radius ${shape.radius}"
+            is Shape.Rectangle -> "A rectangle with width ${shape.width} and height ${shape.height}"
+            Shape.NotAShape -> "Not a shape"
+        }
     }
 }

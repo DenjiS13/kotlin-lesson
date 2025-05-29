@@ -32,42 +32,43 @@ class A_Basics {
 
     private fun stringManipulation() {
 
-        // Interpolation
-        val name = "Marseille"
-        val arr = 16
-        Logger.debug("stringManipulation", "\$name possède \$arr arrondissements : $name possède $arr arrondissements")
+            // Interpolation
+            val name = "Marseille"
+            val arr = 16
+            Logger.debug("stringManipulation", "\$name possède \$arr arrondissements : $name possède $arr arrondissements")
 
-        // \ est un caractère d'échappement
-        val jump = "Salut, je vais sauter à la ligne\nVoilà !"
-        Logger.debug("stringManipulation", jump)
+            // \ est un caractère d'échappement
+            val jump = "Salut, je vais sauter à la ligne\nVoilà !"
+            Logger.debug("stringManipulation", jump)
 
-        // Triple quotes : permet de mettre plusieurs lignes
-        val multiLine = """Salut, je vais sauter à la ligne
+            // Triple quotes : permet de mettre plusieurs lignes
+            val multiLine = """Salut, je vais sauter à la ligne
         Voilà !"""
-        Logger.debug("stringManipulation", multiLine)
+            Logger.debug("stringManipulation", multiLine)
 
-        // boucler sur chaque caractère
-        for (c in name) {
-            Logger.debug("stringManipulation", "for (c in name) :  $c")
-        }
+            // boucler sur chaque caractère
+            for (c in name) {
+                Logger.debug("stringManipulation", "for (c in name) :  $c")
+            }
 
-        // Changer la casse
-        Logger.debug("stringManipulation", "name.uppercase() : " + name.uppercase())
-        Logger.debug("stringManipulation", "name.lowercase() : " + name.lowercase())
+            // Changer la casse
+            Logger.debug("stringManipulation", "name.uppercase() : " + name.uppercase())
+            Logger.debug("stringManipulation", "name.lowercase() : " + name.lowercase())
 
-        // Substring
-        Logger.debug("stringManipulation", "name.substring(0, 5) : " + name.substring(0, 5))
+            // Substring
+            Logger.debug("stringManipulation", "name.substring(0, 5) : " + name.substring(0, 5))
 
-        // Split
-        val paris = "Paris 75"
-        val arrondissement: List<String> = paris.split(" ")
-        Logger.debug("stringManipulation", "arrondissement[0] : " + arrondissement[0])
-        Logger.debug("stringManipulation", "arrondissement[1] : " + arrondissement[1])
+            // Split
+            val paris = "Paris 75"
+            val arrondissement: List<String> = paris.split(" ")
+            Logger.debug("stringManipulation", "arrondissement[0] : " + arrondissement[0])
+            Logger.debug("stringManipulation", "arrondissement[1] : " + arrondissement[1])
 
-        // Concatenation
-        val name2 = "Marseille"
-        val name3 = "Lyon"
-        Logger.debug("stringManipulation", "\$name2 \$name3 : $name2 $name3")
+            // Concatenation
+            val name2 = "Marseille"
+            val name3 = "Lyon"
+            Logger.debug("stringManipulation", "\$name2 \$name3 : $name2 $name3")
+
     }
 
     private fun pairAndTriple() {

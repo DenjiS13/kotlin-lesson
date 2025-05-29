@@ -1,4 +1,4 @@
-package fr.system13.kotlin
+package fr.system13.kotlin.exercices.exo15AlienCoroutine
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,7 +8,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import fr.system13.kotlin.exercices.exo15AlienCoroutine.ui.view.Exo_15_AlienCoroutineView
 import fr.system13.kotlin.ui.theme.KotlinLessonTheme
 
-class MainActivity : ComponentActivity() {
+class Exo_15_AlienCoroutine : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)

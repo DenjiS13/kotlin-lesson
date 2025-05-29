@@ -8,6 +8,8 @@ import fr.system13.kotlin.lessons.E_Loops
 import fr.system13.kotlin.lessons.F_Conditions
 import fr.system13.kotlin.lessons.H_Lambda
 import fr.system13.kotlin.lessons.I_Objects
+import fr.system13.kotlin.lessons.K_Coroutines
+import fr.system13.kotlin.lessons.J_Exceptions
 
 class Exercice_00 {
 
@@ -21,5 +23,7 @@ class Exercice_00 {
         //G_JetPackCompose()
         H_Lambda().callAll()
         I_Objects().callAll()
+        J_Exceptions().callAll()
+        K_Coroutines().callALl()
     }
 }
