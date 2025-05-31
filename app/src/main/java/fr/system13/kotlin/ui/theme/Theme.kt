@@ -11,25 +11,28 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    background = DEFAULT_BACKGROUND_DARK,            // Couleur de l'arrière-plan (fond)
+    onBackground = DEFAULT_ON_BACKGROUND_DARK,       // Couleur du texte de l'arrière-plan
+    surface = DEFAULT_SURFACE_DARK,                  // Couleur de l'arrière-plan des composants (AppBar, Card, etc.)
+    onSurface = DEFAULT_ON_SURFACE_DARK,             // Couleur du texte de l'arrière-plan des composants
+    primary = DEFAULT_PRIMARY_DARK,                  // Couleur principale de l'application (Boutons principaux, etc.)
+    onPrimary = DEFAULT_ON_PRIMARY_DARK,             // Couleur du texte sur la couleur principale (Texte des Boutons principaux, etc.)
+    secondary = DEFAULT_SECONDARY_DARK,              // Couleur secondaire de l'application (FAB, etc.)
+    onSecondary = DEFAULT_ON_SECONDARY_DARK,         // Couleur du texte sur la couleur secondaire (Couleur de l'icône sur le FAB, etc.)
+    error = DEFAULT_ERROR_DARK                       // Couleur d'erreur
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    background = DEFAULT_BACKGROUND,            // Couleur de l'arrière-plan (fond)
+    onBackground = DEFAULT_ON_BACKGROUND,       // Couleur du texte de l'arrière-plan
+    surface = DEFAULT_SURFACE,                  // Couleur de l'arrière-plan des composants (AppBar, etc.) ne marche pas sur les Card
+    onSurface = DEFAULT_ON_SURFACE,             // Couleur du texte de l'arrière-plan des composants
+    primary = DEFAULT_PRIMARY,                  // Couleur principale de l'application (Boutons principaux, etc.)
+    onPrimary = DEFAULT_ON_PRIMARY,             // Couleur du texte sur la couleur principale (Texte des Boutons principaux, etc.)
+    secondary = DEFAULT_SECONDARY,              // Couleur secondaire de l'application (FAB, etc.)
+    onSecondary = DEFAULT_ON_SECONDARY,         // Couleur du texte sur la couleur secondaire (Couleur de l'icône sur le FAB, etc.)
+    error = DEFAULT_ERROR,                       // Couleur d'erreur
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
 )
 
 // region Mario
@@ -50,7 +53,7 @@ private val MarioLightColorScheme = lightColorScheme(
 
 // endregion
 
-// region Mario
+// region NFL
 
 private val NflDarkColorScheme = darkColorScheme(
     primary = NFL_BLUE,

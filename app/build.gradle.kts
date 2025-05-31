@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "fr.system13.kotlin"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -64,5 +64,8 @@ dependencies {
     // Coil : Image + téléchargement
     implementation(libs.coil.kt.coil.compose)
     implementation(libs.coil3.coil.network.okhttp)
+    // Gestion des requêtes HTTP
+    implementation(libs.retrofit2.retrofit)
+    implementation(libs.converter.scalars)
 
 }
