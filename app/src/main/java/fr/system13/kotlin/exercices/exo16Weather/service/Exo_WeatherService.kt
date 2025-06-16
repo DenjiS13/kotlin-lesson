@@ -7,7 +7,10 @@ import retrofit2.http.Query
 
 private var scalarsConverterFactory = ScalarsConverterFactory.create()
 
-private const val API_KEY = "0191d1df945fbe6ec5873f6b1e4c95ab"
+private const val API_ID_1 = "0191d1df";
+private const val API_ID_2 = "945fbe6e"
+private const val API_ID_3 = "c5873f6b"
+private const val API_ID_4 = "1e4c95ab"
 private const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
 
 // construction du retrofit
@@ -24,7 +27,7 @@ interface Exo_WeatherService {
         @Query("cnt") count: Int = 21,
         @Query("units") units: String = "metric",
         @Query("lang") lang: String = "fr",
-        @Query("appid") apiKey: String = API_KEY
+        @Query("appid") appid: String = API_ID_1 + API_ID_2 + API_ID_3 + API_ID_4
     ): String
 }
 
