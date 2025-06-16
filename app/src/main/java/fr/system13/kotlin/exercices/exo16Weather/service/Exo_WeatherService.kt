@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 private var scalarsConverterFactory = ScalarsConverterFactory.create()
 
-private const val API_ID_1 = "0191d1df";
+private const val API_ID_1 = "0191d1df"
 private const val API_ID_2 = "945fbe6e"
 private const val API_ID_3 = "c5873f6b"
 private const val API_ID_4 = "1e4c95ab"
@@ -31,7 +31,7 @@ interface Exo_WeatherService {
     ): String
 }
 
-// Objet d'aappel
+// Objet d'appel
 object Exo_16_WeatherAPI {
     val service: Exo_WeatherService by lazy { retrofit.create(Exo_WeatherService::class.java) }
 }
